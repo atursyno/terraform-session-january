@@ -5,7 +5,7 @@ provider "aws" {
 resource "aws_security_group" "main" {
   name        = "main"
   description = "Allow ports inbound traffic"
-
+}
   ingress {
     from_port        = 22
     to_port          = 22
