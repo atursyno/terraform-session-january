@@ -1,5 +1,9 @@
 provider "aws" {
   region = "us-east-2"
+}
+resource "aws_security_group" "main" {
+  name        = "main"
+  description = "Allow ports for inbound traffic"
 
   ingress {
     from_port        = 22
@@ -38,4 +42,5 @@ provider "aws" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
-  }
+  
+}
