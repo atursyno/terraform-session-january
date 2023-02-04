@@ -1,7 +1,5 @@
 provider "aws" {
   region = "us-east-2"
-}
-
 
   ingress {
     from_port        = 22
@@ -39,4 +37,5 @@ provider "aws" {
     protocol    = "-1"
     cidr_blocks = ["0.0.0.0/0"]
   }
+
   }
