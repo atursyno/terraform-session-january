@@ -56,6 +56,7 @@ resource "aws_route_table_association""privateRouteTableAssociation"{
 
     tags = {
         Name = var.private_route_table
-  }}
+  }
+  }
 
 
