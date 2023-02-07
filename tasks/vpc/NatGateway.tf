@@ -5,6 +5,6 @@ resource "aws_nat_gateway""homework_nat_gateway"{
     connectivity_type = "private"
     allocation_id = aws_eip.nat_gateway_eip.id
     tags ={
-        Name = var.nat_gateWay_name
+        Name = var.nat_gateway_name
     }
 }

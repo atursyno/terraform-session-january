@@ -41,7 +41,7 @@ variable "private_subnet_name_3"{
 
 }
 
-variable "public_route_table__name"{
+variable "public_route_table_name"{
     type = string
     description = "This is a RouteTable tag name for Public Route Table"
     default = "public_route_table"

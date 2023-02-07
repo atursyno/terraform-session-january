@@ -3,7 +3,7 @@
 resource "aws_route_table""public_route_table"{
     vpc_id = aws_vpc.myvpc.id
     tags = {
-        Name = var.public_route_table
+        Name = var.public_route_table_name
   }
 }
 
@@ -53,7 +53,7 @@ resource "aws_route_table_association""private_routetable_3"{
   resource "aws_route_table""private_route_table"{
     vpc_id = aws_vpc.myvpc.id
     tags = {
-        Name = var.private_route_table
+        Name = var.private_route_table_name
   }
   }
 
