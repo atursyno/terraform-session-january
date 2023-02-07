@@ -62,3 +62,4 @@ resource "aws_route_table_association""private_routetable_3"{
     gateway_id = aws_nat_gateway.homework_nat_gateway.id
 
 
+  }
