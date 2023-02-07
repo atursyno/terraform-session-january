@@ -61,4 +61,5 @@ Working Directory
 
   - Where you have all Terraform configuration files.
 
- - Example: session-2
+ - Example: session-23
+
