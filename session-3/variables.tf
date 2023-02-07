@@ -10,6 +10,13 @@ variable "ami"{
     default = "ami-05bfbece1ed5beb54"
 
 }
+variable "name"{
+    type = string
+    description = "Indicates the environment"
+    default = "development"
+
+}
+
 variable "env"{
     type = string
     description = "Indicates the environment"
