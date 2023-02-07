@@ -1,10 +1,10 @@
 resource "aws_instance" "first_ec2" {
-  ami = "ami-05bfbece1ed5beb54"
-  instance_type = "t2.micro"
+  ami = var.ami
+  instance_type = var.instance_type
   vpc_security_group_ids = [aws_security_group.main_sg.id]
   tags = {
     Name = "development"
-    Environtment = "dev"
+    Environtment = var.env
 
   
   } 
