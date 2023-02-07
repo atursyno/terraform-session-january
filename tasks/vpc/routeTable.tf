@@ -13,17 +13,17 @@ resource "aws_route_table""publicRouteTable"{
 }
 
 #-------------Associate subnets to Public Route Table----------
-resource "aws_route_table_association""publicRouteTableAssociation"{
+resource "aws_route_table_association""public_routetable_1"{
     subnet_id = aws_subnet.public_subnet_name_1.id
     route_table_id = aws_route_table.publicRouteTable.id
     
 }
-resource "aws_route_table_association""publicRouteTableAssociation"{
+resource "aws_route_table_association""public_routetable_2"{
     subnet_id = aws_subnet.public_subnet_name_2.id
     route_table_id = aws_route_table.publicRouteTable.id
     
 }
-resource "aws_route_table_association""publicRouteTableAssociation"{
+resource "aws_route_table_association""public_routetable_3"{
     subnet_id = aws_subnet.public_subnet_name_3.id
     route_table_id = aws_route_table.publicRouteTable.id
     
@@ -31,17 +31,17 @@ resource "aws_route_table_association""publicRouteTableAssociation"{
 
 
 #-------------Associate subnets to Private Route Table-----------
-resource "aws_route_table_association""privateRouteTableAssociation"{
+resource "aws_route_table_association""private_routetable_1"{
     subnet_id = aws_subnet.private_subnet_name_1.id
     route_table_id = aws_route_table.privateRouteTable.id
     
 }
-resource "aws_route_table_association""privateRouteTableAssociation"{
+resource "aws_route_table_association""private_routetable_2"{
     subnet_id = aws_subnet.private_subnet_name_2.id
     route_table_id = aws_route_table.privateRouteTable.id
     
 }
-resource "aws_route_table_association""privateRouteTableAssociation"{
+resource "aws_route_table_association""private_routetable_3"{
     subnet_id = aws_subnet.private_subnet_name_3.id
     route_table_id = aws_route_table.privateRouteTable.id
     
