@@ -3,19 +3,19 @@ variable "vpc_name"{
     description = "This is a vpc tag name for vpc"
     default = "my-vpc"
 }
-variable "public_subnet_name1"{
+variable "public_subnet_name_1"{
     type = string
     description = "This is a subnet tag name for subnet"
     default = "public_subnet_01"
 
 }
-variable "public_subnet_name2"{
+variable "public_subnet_name_2"{
     type = string
     description = "This is a subnet tag name for subnet"
     default = "public_subnet_01"
 
 }
-variable "public_subnet_name3"{
+variable "public_subnet_name_3"{
     type = string
     description = "This is a subnet tag name for subnet"
     default = "public_subnet_02"
