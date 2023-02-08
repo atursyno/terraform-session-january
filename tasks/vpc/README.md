@@ -22,7 +22,7 @@ vpc.jpeg
 
 ### Usage
 
-- To quickly install and destory ec2 instance in aws cloud
+- To quickly install and destroy ec2 instance in aws cloud
 
 ### prerequisites
 
@@ -37,11 +37,11 @@ vpc.jpeg
 
 - step one: clone the repo
 
-`git clone https://github.com/`
+`git clone https://github.com/atursyno/terraform-session-january.git`
 
-- change the directory to Session-2 and run terraform commands.
+- change the directory to tasks/vpc and run terraform commands.
 
-`cd session-3
+`cd tasks/vpc
 terraform init
 terraform plan
 terraform apply`
