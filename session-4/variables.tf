@@ -13,3 +13,15 @@ variable "sg_name"{
     description = " This is a sg name"
     default = "security_group"
 }
+
+variable "protocol"{
+    type = string
+    description = " This is a protocol type"
+    default = "tcp"
+}
+
+variable "cidr_block"{
+    type = string
+    description = " This is a cidr block"
+    default = "0.0.0.0/0"
+}
