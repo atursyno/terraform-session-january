@@ -3,7 +3,15 @@
 resource "aws_vpc""myvpc_v1" {
   cidr_block = var.cidr_block
   tags = {
-      Name = var.vpc_name
+      Name = "${var.vpc_env}-dev"
+
+  }
+}
+
+resource "aws_vpc""myvpc_v1" {
+  cidr_block = var.cidr_block
+  tags = {
+      Name = "${var.vpc_env}-qa"
 
   }
 }

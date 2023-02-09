@@ -1,7 +1,7 @@
-variable "vpc_name"{
+variable "vpc_env"{
     type = string
     description = "This is a vpc tag name for vpc"
-    default = "my-vpcv1.1"
+    default = "vpc"
 }
 variable "cidr_block"{
     type = string
@@ -112,6 +112,12 @@ variable "subnet"{
     default = "subnet"
 
 }
+variable "cidr_block"{
+    type = string
+    description = " This is a cidr block"
+    default = "0.0.0.0/0"
+}
+
 
 
 
