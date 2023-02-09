@@ -14,10 +14,15 @@ variable "sg_name"{
     default = "security_group"
 }
 
-variable "protocol"{
+variable "protocol1"{
     type = string
     description = " This is a protocol type"
     default = "tcp"
+}
+variable "protocol2"{
+    type = string
+    description = " This is a protocol type"
+    default = "udp"
 }
 
 variable "cidr_block"{
