@@ -3,7 +3,7 @@
 
 
 resource "aws_subnet" "private_subnet_name1"{
-    vpc_id = aws_vpc.myvpc.id
+    vpc_id = aws_vpc.myvpc_v1.id
     availability_zone = "${var.availibility_zone}-a"
     cidr_block = var.cidr_block_pr1
     tags ={
@@ -12,7 +12,7 @@ resource "aws_subnet" "private_subnet_name1"{
 }
 
 resource "aws_subnet" "private_subnet_name2"{
-    vpc_id = aws_vpc.myvpc.id
+    vpc_id = aws_vpc.myvpc_v1.id
     availability_zone = "${var.availibility_zone}-b"
     cidr_block = var.cidr_block_pr2
     tags ={
@@ -20,9 +20,9 @@ resource "aws_subnet" "private_subnet_name2"{
     }
 }
   resource "aws_subnet" "private_subnet_name3"{
-    vpc_id = aws_vpc.myvpc.id
+    vpc_id = aws_vpc.myvpc_v1.id
     availability_zone = "${var.availibility_zone}-c"
-    cidr_block = cidr_block_pr3
+    cidr_block = var.cidr_block_pr3
     tags ={
         Name = format("%s-public01", var.subnet)
     }
