@@ -82,3 +82,20 @@ variable "availibility_zone_3"{
     default = "us-east-2c"
 
 }
+
+variable "protocol1"{
+    type = string
+    description = " This is a protocol type"
+    default = "tcp"
+}
+variable "protocol2"{
+    type = string
+    description = " This is a protocol type"
+    default = "udp"
+}
+
+variable "cidr_block"{
+    type = string
+    description = " This is a cidr block"
+    default = "0.0.0.0/0"
+}
