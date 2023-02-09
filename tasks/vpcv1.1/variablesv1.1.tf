@@ -3,7 +3,7 @@ variable "vpc_env"{
     description = "This is a vpc tag name for vpc"
     default = "vpc"
 }
-variable "cidr_block"{
+variable "cidr_block_vpc"{
     type = string
     description = "This is a cidr block for vpc"
     default = "10.0.0.0/16"
