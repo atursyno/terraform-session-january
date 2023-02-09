@@ -8,7 +8,7 @@ resource "aws_vpc""myvpc_v1" {
   }
 }
 
-resource "aws_vpc""myvpc_v1.1" {
+resource "aws_vpc""myvpc2_v1" {
   cidr_block = var.cidr_block_vpc
   tags = {
       Name = "${var.vpc_env}-qa"
