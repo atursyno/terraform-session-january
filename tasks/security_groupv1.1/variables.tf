@@ -28,21 +28,38 @@ variable "cidr_block"{
 }
 
 
-variable "port2"{
+variable "port22"{
     type = string
     description = " This is a port starting from 2 to ~>"
-    default = "2"
+    default = "22"
 }
+variable "port23"{
+    type = string
+    description = " This is a port starting from 2 to ~>"
+    default = "23"
+}
+variable "port25"{
+    type = string
+    description = " This is a port starting from 2 to ~>"
+    default = "25"
+}
+
+
 variable "port80"{
     type = string
     description = " This is a port 22"
     default = "80"
 }
-variable "port3"{
+variable "port3389"{
     type = string
     description = " This is a port starting from 3 to ~>"
-    default = "33"
+    default = "3389"
 }
+variable "port3306"{
+    type = string
+    description = " This is a port starting from 3 to ~>"
+    default = "3306"
+
 variable "port443"{
     type = string
     description = " This is a port 443"

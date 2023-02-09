@@ -6,26 +6,26 @@ resource "aws_security_group" "main_sg1" {
   vpc_id      = var.vpc_id
 
   ingress {
-    from_port        = "${var.port2}-2"
-    to_port          = "${var.port2}-2"
+    from_port        = var.port22
+    to_port          = var.port22
     protocol         = var.protocol1  
     cidr_blocks      = [var.cidr_block] 
   }
   ingress {
-    from_port        = "${var.port2}-3"
-    to_port          = "${var.port2}-3"
+    from_port        = var.port23
+    to_port          = var.port23
     protocol         = var.protocol1  
     cidr_blocks      = [var.cidr_block] 
   }
   ingress {
-    from_port        = "${var.port2}-5"
-    to_port          = "${var.port2}-5"
+    from_port        = var.port25
+    to_port          = var.port25
     protocol         = var.protocol1  
     cidr_blocks      = [var.cidr_block] 
   }
   ingress {
-    from_port        = "${var.port2}-049"
-    to_port          = "${var.port2}-049"
+    from_port        = var.port5439
+    to_port          = var.port5439
     protocol         = var.protocol1  
     cidr_blocks      = [var.cidr_block] 
   }
@@ -42,15 +42,10 @@ resource "aws_security_group" "main_sg1" {
     protocol         = var.protocol1  
     cidr_blocks      = [var.cidr_block] 
   }
+
     ingress {
-    from_port        = "${var.port2}-06"
-    to_port          = "${var.port2}-06"
-    protocol         = var.protocol1   
-    cidr_blocks      = [var.cidr_block] 
-  }
-    ingress {
-    from_port   = "${var.port2}-89"
-    to_port     = "${var.port2}-89"
+    from_port   = var.port3389
+    to_port     = var.port3389
     protocol    = var.protocol1
     cidr_blocks = [var.cidr_block]
   }
