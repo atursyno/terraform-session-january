@@ -43,11 +43,13 @@ resource "aws_security_group" "main_sg1" {
     cidr_blocks = [var.cidr_block]
   }
 
-  ingress {
+resource "aws_security_group_rule" "ingress_3889" {
+    type        = "ingress"
     from_port   = 3889
     to_port     = 3889
     protocol    = var.protocol2
     cidr_blocks = [var.cidr_block]
+    security_group_id = aws_security_group.main_sg1.id
   }
 
   egress {
