@@ -3,7 +3,7 @@
 resource "aws_security_group" "main_sg1" {   
   name        = "${var.sg_name}-dev"
   description = format("%s-andOpeningPorts", var.sg_name)
-  #vpc_id = aws_vpc.myvpc.id
+  vpc_id = aws_vpc.myvpc.id
 
   ingress {
     from_port        = 22
@@ -42,14 +42,13 @@ resource "aws_security_group" "main_sg1" {
     protocol    = var.protocol1
     cidr_blocks = [var.cidr_block]
   }
-}
-resource "aws_security_group_rule" "ingress_3889" {
-    type        = "ingress"
+
+    ingress {
     from_port   = 3889
     to_port     = 3889
     protocol    = var.protocol2
     cidr_blocks = [var.cidr_block]
-    security_group_id = aws_security_group.main_sg1.id
+    #security_group_id = aws_security_group.main_sg1.id
   }
 
   egress {
@@ -71,5 +70,5 @@ resource "aws_security_group_rule" "ingress_3889" {
     protocol         = "-1" # string # All ports and protocols
     cidr_blocks      = [var.cidr_block] 
   }
-
+}
 
