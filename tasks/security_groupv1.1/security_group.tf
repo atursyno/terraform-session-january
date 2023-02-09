@@ -1,9 +1,15 @@
 #Open 10 more ports on the security group
 #Every Resource has to have an environment specific name
 resource "aws_security_group" "main_sg1" {   
-  name        = "${var.sg_name}-dev"
-  description = format("%s-andOpeningPorts", var.sg_name)
+  name        = "${var.sg_env}-dev"
+  description = format("%s-andOpeningPorts", var.sg_env)
   vpc_id      = var.vpc_id
+
+
+  resource "aws_security_group" "main_sg1" {   
+  name        = "${var.sg_env}-qa"
+  description = format("%s-andOpeningPorts", var.sg_env)
+  vpc_id = aws_vpc.myvpc_v1.1.id
 
   ingress {
     from_port        = var.port22
