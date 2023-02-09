@@ -3,72 +3,72 @@
 resource "aws_security_group" "main_sg1" {   
   name        = "${var.sg_name}-dev"
   description = format("%s-andOpeningPorts", var.sg_name)
-  vpc_id      = aws_vpc.myvpc.id
+  vpc_id      = var.vpc_id
 
   ingress {
-    from_port        = 22
-    to_port          = 22
+    from_port        = "${var.port2}-2"
+    to_port          = "${var.port2}-2"
     protocol         = var.protocol1  
     cidr_blocks      = [var.cidr_block] 
   }
   ingress {
-    from_port        = 23
-    to_port          = 23
+    from_port        = "${var.port2}-3"
+    to_port          = "${var.port2}-3"
+    protocol         = var.protocol1  
+    cidr_blocks      = [var.cidr_block] 
+  }
+  ingress {
+    from_port        = "${var.port2}-5"
+    to_port          = "${var.port2}-5"
+    protocol         = var.protocol1  
+    cidr_blocks      = [var.cidr_block] 
+  }
+  ingress {
+    from_port        = "${var.port2}-049"
+    to_port          = "${var.port2}-049"
     protocol         = var.protocol1  
     cidr_blocks      = [var.cidr_block] 
   }
 
     ingress {
-    from_port        = 443
-    to_port          = 443
+    from_port        = var.port443
+    to_port          = var.port443
     protocol         = var.protocol1  
     cidr_blocks      = [var.cidr_block] 
   }
     ingress {
-    from_port        = 80
-    to_port          = 80
+    from_port        = var.port80
+    to_port          = var.port80
     protocol         = var.protocol1  
     cidr_blocks      = [var.cidr_block] 
   }
     ingress {
-    from_port        = 3306
-    to_port          = 3306
+    from_port        = "${var.port2}-06"
+    to_port          = "${var.port2}-06"
     protocol         = var.protocol1   
     cidr_blocks      = [var.cidr_block] 
   }
     ingress {
-    from_port   = 3889
-    to_port     = 3889
+    from_port   = "${var.port2}-89"
+    to_port     = "${var.port2}-89"
     protocol    = var.protocol1
     cidr_blocks = [var.cidr_block]
   }
 
-    ingress {
-    from_port   = 3889
-    to_port     = 3889
-    protocol    = var.protocol2
-    cidr_blocks = [var.cidr_block]
-    #security_group_id = aws_security_group.main_sg1.id
-  }
 
   egress {
-    from_port   = 443
-    to_port     = 443
+    from_port   = var.port443
+    to_port     = var.port443
     protocol    = var.protocol1
     cidr_blocks = [var.cidr_block]
   }
 
   egress {
-    from_port   = 80
-    to_port     = 80
+    from_port   = var.port80
+    to_port     = var.port80
     protocol    = var.protocol1
     cidr_blocks = [var.cidr_block]
   }
-   egress {
-    from_port        = 0
-    to_port          = 0
-    protocol         = "-1" # string # All ports and protocols
-    cidr_blocks      = [var.cidr_block] 
-  }
+
 }
 
