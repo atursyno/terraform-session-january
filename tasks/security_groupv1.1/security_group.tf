@@ -6,11 +6,6 @@ resource "aws_security_group" "main_sg1" {
   vpc_id      = var.vpc_id
 
 
-  resource "aws_security_group" "main_sg1" {   
-  name        = "${var.sg_env}-qa"
-  description = format("%s-andOpeningPorts", var.sg_env)
-  vpc_id = aws_vpc.myvpc_v1.1.id
-
   ingress {
     from_port        = var.port22
     to_port          = var.port22
@@ -42,6 +37,7 @@ resource "aws_security_group" "main_sg1" {
     protocol         = var.protocol1  
     cidr_blocks      = [var.cidr_block] 
   }
+
     ingress {
     from_port        = var.port80
     to_port          = var.port80
