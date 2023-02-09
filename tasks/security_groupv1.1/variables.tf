@@ -59,10 +59,15 @@ variable "port3306"{
     type = string
     description = " This is a port starting from 3 to ~>"
     default = "3306"
-
+}
 variable "port443"{
     type = string
     description = " This is a port 443"
     default = "443"
+}
+variable "port5439"{
+    type = string
+    description = " This is a port 443"
+    default = "5439"
 }
 
