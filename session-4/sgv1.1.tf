@@ -42,7 +42,7 @@ resource "aws_security_group" "main_sg1" {
     protocol    = var.protocol1
     cidr_blocks = [var.cidr_block]
   }
-
+}
 resource "aws_security_group_rule" "ingress_3889" {
     type        = "ingress"
     from_port   = 3889
@@ -71,5 +71,5 @@ resource "aws_security_group_rule" "ingress_3889" {
     protocol         = "-1" # string # All ports and protocols
     cidr_blocks      = [var.cidr_block] 
   }
-}
+
 
