@@ -106,7 +106,12 @@ variable "availibility_zone"{
 
 }
 
+variable "subnet"{
+    type = string
+    description = "This is a subnet tag name for subnet"
+    default = "subnet"
 
+}
 
 
 
