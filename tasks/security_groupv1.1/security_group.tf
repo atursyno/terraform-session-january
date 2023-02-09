@@ -3,7 +3,7 @@
 resource "aws_security_group" "main_sg1" {   
   name        = "${var.sg_name}-dev"
   description = format("%s-andOpeningPorts", var.sg_name)
-  #vpc_id = aws_vpc.myvpc.id
+  vpc_id      = aws_vpc.myvpc.id
 
   ingress {
     from_port        = 22
