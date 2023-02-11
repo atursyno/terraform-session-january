@@ -9,8 +9,8 @@ resource "aws_security_group_rule""ingress"{
     type             = "ingress"
     from_port        = element(var.ports, count.index) # it will create 0,1  indexes 
     to_port          = element(var.ports, count.index)
-    protocol         = element(var.ports, count.index)  # string
-    cidr_blocks      = element(var.ports, count.index) # list of strings
+    protocol         = element(var.protocols, count.index)  # string
+    cidr_blocks      = element(var.cidr_blocks, count.index) # list of strings
     security_group_id = aws_security_group.main_sgv1.id
   }
 
@@ -19,7 +19,7 @@ resource "aws_security_group_rule""ingress"{
     type             = "egress"
     from_port        = element(var.ports, count.index) # it will create 0,1  indexes 
     to_port          = element(var.ports, count.index)
-    protocol         = element(var.ports, count.index) # string
-    cidr_blocks      = element(var.ports, count.index) # list of strings
+    protocol         = element(var.protocols, count.index) # string
+    cidr_blocks      = element(var.cidr_blocks, count.index) # list of strings
     security_group_id = aws_security_group.main_sgv1.id
   }
