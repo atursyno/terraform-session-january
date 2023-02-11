@@ -1,6 +1,6 @@
-resource "aws_security_group" "main_sg1" {   
-  name        = "${var.env}-sg"
-  description = format("%s-sg", var.env)
+resource "aws_security_group" "main_sg" {   
+  name        = "${var.env}-sgv1"
+  description = format("%s-sgv1", var.env)
   vpc_id      = var.vpc_id
 
 }
