@@ -18,13 +18,13 @@ variable "ports"{
 }
 
 variable "protocols"{
-    type = string
+    type = list(string)
     description = " This is a protocol type"
     default = ["tcp"]
 }
 
 variable "cidr_blocks"{
-    type = string
+    type = list(string)
     description = " This is a cidr block"
     default = ["0.0.0.0/0"]
 }
