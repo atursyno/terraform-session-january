@@ -13,3 +13,8 @@ variable "sg_name"{
     description = " This is a sg name"
     default = "security_group"
 }
+variable "ports"{
+    type = list(string)
+    description = " This is a sg name"
+    default = ["22"]
+}
