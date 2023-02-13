@@ -12,17 +12,9 @@ resource "aws_route""default_private_route"{
 
 #-------------Associate subnets to Private Route Table-----------
 resource "aws_route_table_association""private_routetable1"{
-    subnet_id = aws_subnet.private_subnet_namev2.id
-    route_table_id = aws_route_table.private_route.id
-    
-}
-resource "aws_route_table_association""private_routetable2"{
-    subnet_id = aws_subnet.private_subnet_namev2.id
-    route_table_id = aws_route_table.private_route.id
-    
-}
-resource "aws_route_table_association""private_routetable3"{
-    subnet_id = aws_subnet.private_subnet_namev2.id
+    count = "${length(var.private_cidr_blocks)}"
+    subnet_id = "${element(aws_subnet.private_subnet_namev2.*.id, count.index)}"
+    #subnet_id = aws_subnet.private_subnet_namev2.id
     route_table_id = aws_route_table.private_route.id
     
 }
