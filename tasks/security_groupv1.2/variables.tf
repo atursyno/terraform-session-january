@@ -1,3 +1,7 @@
+#-----Giving variable for provider-------
+variable "region" {
+    default = "us-east-2"
+}
 variable "vpc_id" {
     type = string
     description = "This is vpc id"
@@ -17,10 +21,10 @@ variable "ports"{
     default = [22,23,25,80,443,3306,3389,5439,1433,2049]
 }
 
-variable "protocols"{
-    type = list(string)
+variable "protocol"{
+    type = string
     description = " This is a protocol type"
-    default = ["tcp"]
+    default = "tcp"
 }
 
 variable "cidr_blocks"{
