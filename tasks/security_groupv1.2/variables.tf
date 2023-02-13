@@ -30,5 +30,5 @@ variable "protocol"{
 variable "cidr_blocks"{
     type = string
     description = " This is a cidr block"
-    default = ["0.0.0.0/0"]
+    default = "0.0.0.0/0"
 }
