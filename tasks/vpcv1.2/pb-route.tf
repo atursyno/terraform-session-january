@@ -6,6 +6,6 @@ tags = {
 }
 resource "aws_route""default_public_route"{
     route_table_id = aws_route_table.public_route.id
-    destination_cidr_block = var.cidr_block
+    destination_cidr_block = "${var.cidr_block_vpc[0]}"
     gateway_id = aws_internet_gateway.my-igv2.id
 }
