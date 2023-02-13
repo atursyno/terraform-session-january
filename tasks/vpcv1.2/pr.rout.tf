@@ -9,3 +9,20 @@ resource "aws_route""default_private_route"{
     destination_cidr_block = "${var.cidr_block_vpc[0]}"
     gateway_id = aws_internet_gateway.my-igv2.id
 }
+
+#-------------Associate subnets to Private Route Table-----------
+resource "aws_route_table_association""private_routetable1"{
+    subnet_id = aws_subnet.private_subnet_namev2.id
+    route_table_id = aws_route_table.private_route.id
+    
+}
+resource "aws_route_table_association""private_routetable2"{
+    subnet_id = aws_subnet.private_subnet_namev2.id
+    route_table_id = aws_route_table.private_route.id
+    
+}
+resource "aws_route_table_association""private_routetable3"{
+    subnet_id = aws_subnet.private_subnet_namev2.id
+    route_table_id = aws_route_table.private_route.id
+    
+}
