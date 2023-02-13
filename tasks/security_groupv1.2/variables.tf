@@ -28,7 +28,7 @@ variable "protocol"{
 }
 
 variable "cidr_blocks"{
-    type = list(string)
+    type = string
     description = " This is a cidr block"
     default = ["0.0.0.0/0"]
 }
