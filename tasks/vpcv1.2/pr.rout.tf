@@ -1,4 +1,4 @@
-resource "aws_route_table""private_route"
+resource "aws_route_table""private_route"{
 vpc_id = aws_vpc.vpc_version2.id
 tags = {
     Name = "${var.env}-private-rt"

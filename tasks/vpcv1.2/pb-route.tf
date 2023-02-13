@@ -1,4 +1,4 @@
-resource "aws_route_table""public_route"
+resource "aws_route_table""public_route"{
 vpc_id = aws_vpc.vpc_version2.id
 tags = {
     Name = "${var.env}-public-rt"
