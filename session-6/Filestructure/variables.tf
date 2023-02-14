@@ -1,6 +1,6 @@
 variable "env"{
-    type = string
+    type = list(string)
     description = " This is an environemant name"
-    default = "qa"
+    default = ["dev", "qa"]
 
 }
