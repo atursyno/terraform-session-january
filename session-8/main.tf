@@ -4,7 +4,7 @@ resource "aws_instance" "main" {
   vpc_security_group_ids = [aws_security_group.main_sg.id]
   key_name = aws_key_pair.terraform_server.key_name
 
-  provisioner "file"{
+  provisioner "file" { 
     source = "~/terraform-session-january/session-8/index.html" #path on Terraform Server
     destination = "/tmp/index.html" #path for the remote server 
 
@@ -16,7 +16,7 @@ resource "aws_instance" "main" {
     
     }
   }
-  provisioner = "remote-exec" {
+  provisioner "remote-exec" {
     inline = [
       "sudo yum install httpd -y",
       "sudo systemctl enable httpd",
