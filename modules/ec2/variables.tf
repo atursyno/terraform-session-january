@@ -23,3 +23,9 @@ variable "instance_type"{
     default = "t2.micro"
 
 }
+variable "sg"{
+    type = list(string)
+    description = "list of security group ids"
+    default = ""
+
+}
