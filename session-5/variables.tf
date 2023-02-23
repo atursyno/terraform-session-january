@@ -16,5 +16,12 @@ variable "sg_name"{
 variable "ports"{
     type = list(string)
     description = " This is a sg name"
-    default = ["22"]
+    default = ["22", "80"]
 }
+
+variable "ports"{
+    type = list(string)
+    description = " This is a sg name"
+    default = ["22", "80", "3306", "443"]
+}
+

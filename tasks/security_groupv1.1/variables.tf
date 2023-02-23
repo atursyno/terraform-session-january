@@ -4,10 +4,10 @@ variable "vpc_id" {
     default = "vpc-0f273f0c703b9d1f3"
 }
 
-variable "sg_env"{
+variable "env"{
     type = string
     description = " This is a sg name"
-    default = "security_group"
+    default = "dev"
 }
 
 variable "protocol1"{

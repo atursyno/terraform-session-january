@@ -1,11 +1,10 @@
 #Open 10 more ports on the security group
 #Every Resource has to have an environment specific name
 resource "aws_security_group" "main_sg1" {   
-  name        = "${var.sg_env}-dev"
-  description = format("%s-andOpeningPorts", var.sg_env)
+  name        = "${var.env}-sg"
+  description = format("%s-sg", var.env)
   vpc_id      = var.vpc_id
-
-
+  
   ingress {
     from_port        = var.port22
     to_port          = var.port22
