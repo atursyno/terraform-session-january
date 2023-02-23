@@ -5,8 +5,7 @@ module "mainec2"{
     ami = "ami-05bfbece1ed5beb54"
     instance_type = "t2.micro"
     name = "staging"
-    sg = [module.ec2_sg.id]
-
+    sg = [module.ec2_sg.main_sg_id]
 }
 
 module "ec2_sg"{
