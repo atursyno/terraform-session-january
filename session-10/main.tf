@@ -3,8 +3,7 @@ module "ec2_instance"{
     source = "terraform-aws-modules/ec2-instance/aws"    # Where the child module is
     version = "2.12.0"
    ##########Variables that we need here###########
-    name = "myEc2Instance"
-    env  = "${var.env}-ec2"
+    name = "${var.env}-ec2"
     ami  = "ami-05bfbece1ed5beb54"
     instance_type = "t2.micro"
     vpc_security_group_ids = [module.security-group.main_sg_id]
