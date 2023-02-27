@@ -3,7 +3,7 @@ output "main_sg_id"{
     
 }
 output "main_sg-id"{
-    value = security-group.main.id
+    value = aws_security_group.main.id
     
 }
 
