@@ -2,7 +2,7 @@ output "main_sg_id"{
     value = aws_security_group.main.id
     
 }
-output "main_sg_id"{
+output "main_sg-id"{
     value = security-group.main.id
     
 }
