@@ -7,7 +7,7 @@ module "ec2_instance"{
  #   env  = "${var.env}-ec2"
     ami  = "ami-05bfbece1ed5beb54"
     instance_type = "t2.micro"
-    vpc_security_group_ids = [module.security-group.main_sg-id]
+    vpc_security_group_ids = [module.security-group.security_group_id]
     subnet_id = "${var.vpc_public_subnets[0]}"
     tags = {
         Terraform   = "true"
