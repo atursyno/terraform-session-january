@@ -2,9 +2,8 @@
 module "ec2_instance"{
     source = "terraform-aws-modules/ec2-instance/aws"    # Where the child module is
     version = "2.12.0"
-   ##########Variables that we need here###########
+ 
     name = "ec2"
- #   env  = "${var.env}-ec2"
     ami  = "ami-05bfbece1ed5beb54"
     instance_type = "t2.micro"
     vpc_security_group_ids = [module.security-group.security_group_id]
@@ -48,8 +47,6 @@ module "vpc"{
    
     private_subnets = var.vpc_private_subnets
     public_subnets  = var.vpc_public_subnets
-
-    #enable_nat_gateway = var.vpc_enable_nat_gateway
 
     tags = var.vpc_tags
     }
