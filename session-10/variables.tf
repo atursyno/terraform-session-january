@@ -32,7 +32,11 @@ variable "vpc_enable_nat_gateway" {
   type        = bool
   default     = true
 }
-
+variable "cidr_0" {
+  description = "CIDR block for VPC"
+  type        = string
+  default     = "0.0.0.0/0"
+}
 variable "vpc_tags" {
   description = "Tags to apply to resources created by VPC module"
   type        = map(string)
