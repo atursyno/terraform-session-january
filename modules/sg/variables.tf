@@ -4,9 +4,3 @@ variable "env"{
     description = "This variable "
 }
 
-variable "name"{
-    type = string
-    description = "Indicates the name"
-    default = "development"
-
-}

@@ -19,7 +19,7 @@ variable "ports"{
     default = ["22", "80"]
 }
 
-variable "ports"{
+variable "ports_egress"{
     type = list(string)
     description = " This is a sg name"
     default = ["22", "80", "3306", "443"]

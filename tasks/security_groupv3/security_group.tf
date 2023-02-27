@@ -1,5 +1,5 @@
 resource "aws_security_group" "main_sgv2" {   
-  name        = "${var.env}-sgv2"
+  name        = replace(local.name, "resource", "res_sec")  "${var.env}-sgv2"
   description = format("%s-sgv2", var.env)
   vpc_id      = var.vpc_id
 

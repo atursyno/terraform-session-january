@@ -32,10 +32,6 @@ variable "cidr_blocks"{
     description = " This is a cidr block"
     default = "0.0.0.0/0"
 }
-variable "env"{
-    type = string
-    default = "dev"
-}
 variable "team"{
     type = string
     default = "devops"
