@@ -8,7 +8,5 @@ module "ec2_sg"{
 }
 module "vpc"{
     source = "terraform-aws-modules/vpc/aws"
-    version = "3.18.0"
-    env = "${var.env}-vpc"
-    
+    version = "3.18.0"   
 }
